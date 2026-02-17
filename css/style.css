@@ -433,66 +433,275 @@ select {
   gap: 1rem;
 }
 
-.contact-layout {
+.contact-page main {
+  padding-bottom: calc(0.9rem + env(safe-area-inset-bottom));
+}
+
+.contact-page .site-header {
+  padding-top: env(safe-area-inset-top);
+}
+
+.contact-hero {
+  padding-top: 1.8rem;
+  padding-bottom: 1.1rem;
+}
+
+.contact-hero-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  min-height: 13.5rem;
+  padding: 1.8rem 1.2rem;
+  color: #f7f3ec;
+  background: linear-gradient(145deg, #3f3b35 0%, #171717 100%);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+}
+
+.contact-hero-banner::before,
+.contact-hero-banner::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.contact-hero-banner::before {
+  width: 220px;
+  height: 220px;
+  top: -88px;
+  right: -62px;
+  background: rgba(255, 255, 255, 0.17);
+}
+
+.contact-hero-banner::after {
+  width: 180px;
+  height: 180px;
+  bottom: -82px;
+  left: -52px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.contact-hero-banner .eyebrow {
+  position: relative;
+  z-index: 1;
+  color: rgba(250, 246, 239, 0.84);
+}
+
+.contact-hero-banner h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 10vw, 3.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.contact-hero-subtitle {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.7rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 4.6vw, 1.2rem);
+}
+
+.consultation-guide {
+  padding-top: 0.4rem;
+}
+
+.consultation-guide-card,
+.phone-consult-card,
+.inquiry-form,
+.business-info-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+}
+
+.consultation-guide-card {
+  padding: 1.3rem 1.1rem;
+}
+
+.consultation-guide-card h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.35rem;
+}
+
+.consultation-guide-card p {
+  color: var(--text-soft);
+}
+
+.consultation-guide-card p + p {
+  margin-top: 0.6rem;
+}
+
+.phone-consultation {
+  padding-top: 0.8rem;
+}
+
+.phone-consult-card {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.35rem 1.1rem;
+}
+
+.phone-consult-copy h2 {
+  margin-bottom: 0.55rem;
+  font-size: 1.35rem;
+}
+
+.phone-label {
+  margin-bottom: 0.25rem;
+  color: #6a6259;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.phone-number {
+  font-size: clamp(1.75rem, 8.2vw, 2.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.phone-help {
+  margin-top: 0.55rem;
+  color: var(--text-soft);
+}
+
+.phone-call-button {
+  width: 100%;
+  min-height: 54px;
+  border-radius: 14px;
+}
+
+.inquiry-business {
+  padding-top: 0.8rem;
+}
+
+.inquiry-business-layout {
   display: grid;
   gap: 1rem;
 }
 
-.contact-info,
-.contact-form {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--surface);
-  padding: 1.2rem;
+.inquiry-form,
+.business-info-card {
+  padding: 1.3rem 1.1rem;
 }
 
-.contact-info h2 {
-  margin-bottom: 0.7rem;
+.inquiry-form h2,
+.business-info-card h2 {
   font-size: 1.35rem;
 }
 
-.contact-info ul {
-  list-style: none;
-  display: grid;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.contact-info li {
+.inquiry-form-intro {
+  margin-top: 0.5rem;
+  margin-bottom: 1.1rem;
   color: var(--text-soft);
+  font-size: 0.96rem;
 }
 
 .form-group {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.95rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.inquiry-form .form-group input,
+.inquiry-form .form-group select,
+.inquiry-form .form-group textarea {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0.72rem 0.85rem;
-  min-height: 48px;
+  border-radius: 14px;
+  padding: 0.86rem 0.92rem;
+  min-height: 54px;
   background: #fffdfa;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
-.form-group textarea {
+.inquiry-form .form-group select {
+  padding-right: 2.4rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #6d675d 50%),
+    linear-gradient(135deg, #6d675d 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.inquiry-form .form-group textarea {
   resize: vertical;
-  min-height: 140px;
+  min-height: 170px;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.inquiry-form .form-group input:focus,
+.inquiry-form .form-group select:focus,
+.inquiry-form .form-group textarea:focus {
   outline: 2px solid #8e8477;
   outline-offset: 1px;
+}
+
+.consent-group {
+  margin-bottom: 1rem;
+}
+
+.consent-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--text-soft);
+  font-size: 0.94rem;
+}
+
+.consent-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.1rem;
+  accent-color: #1f1f1f;
+  flex-shrink: 0;
+}
+
+.inquiry-submit {
+  width: 100%;
+  margin-top: 0.2rem;
+  min-height: 54px;
+  border-radius: 14px;
+}
+
+.business-info-list {
+  margin-top: 0.95rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.business-info-list div {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.business-info-list div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.business-info-list dt {
+  color: #645d53;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.business-info-list dd {
+  margin: 0.28rem 0 0;
+  color: var(--text-soft);
 }
 
 .site-footer {
@@ -575,9 +784,36 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .contact-layout {
-    grid-template-columns: 0.82fr 1.18fr;
+  .contact-hero {
+    padding-top: 2.5rem;
+  }
+
+  .contact-hero-banner {
+    min-height: 16rem;
+    padding: 2.6rem 2.2rem;
+  }
+
+  .consultation-guide-card,
+  .phone-consult-card,
+  .inquiry-form,
+  .business-info-card {
+    padding: 1.7rem;
+  }
+
+  .phone-consult-card {
+    grid-template-columns: 1fr auto;
+    gap: 1.4rem;
+  }
+
+  .phone-call-button {
+    width: auto;
+    min-width: 182px;
+  }
+
+  .inquiry-business-layout {
+    align-items: start;
     gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
   }
 
   .cta-inner {
@@ -600,6 +836,15 @@ select {
 
   .inner-hero {
     padding-top: 4rem;
+  }
+
+  .contact-hero-banner {
+    min-height: 18rem;
+  }
+
+  .inquiry-business-layout {
+    gap: 1.4rem;
+    grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.72fr);
   }
 }
 
