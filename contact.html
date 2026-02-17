@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>문의하기 | SOO DESINE 수디자인</title>
+    <meta
+      name="description"
+      content="수디자인 인테리어 상담 문의 페이지입니다. 프로젝트 목적, 예산, 일정 정보를 남겨주세요."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">SOO DESINE <span>수디자인</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          메뉴
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav container" aria-label="주요 메뉴">
+        <a href="index.html">홈</a>
+        <a href="about.html">회사소개</a>
+        <a href="portfolio.html">포트폴리오</a>
+        <a href="contact.html" aria-current="page">문의하기</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container page-hero">
+        <p class="eyebrow">Contact</p>
+        <h1>프로젝트 상담 문의</h1>
+        <p>
+          아래 양식에 프로젝트 정보를 입력해 주시면, 담당자가 확인 후 신속하게 연락드리겠습니다.
+        </p>
+      </section>
+
+      <section class="section container">
+        <form class="contact-form" action="#" method="post">
+          <div class="field">
+            <label for="name">담당자 성함</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="phone">연락처</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="field">
+            <label for="email">이메일</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="projectType">프로젝트 유형</label>
+            <select id="projectType" name="projectType" required>
+              <option value="">선택해 주세요</option>
+              <option value="residential">주거 인테리어</option>
+              <option value="commercial">상업공간 인테리어</option>
+              <option value="remodeling">부분 리모델링</option>
+              <option value="consulting">디자인 컨설팅</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">상담 내용</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="button primary submit-button" type="submit">문의 접수하기</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 SOO DESINE(수디자인). All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
