@@ -787,6 +787,84 @@ select {
   color: #f5eee3;
 }
 
+/* 공통 플로팅 상담 버튼 */
+.floating-consult {
+  position: fixed;
+  right: max(0.8rem, calc(env(safe-area-inset-right) + 0.55rem));
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.floating-consult__link {
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  touch-action: manipulation;
+}
+
+.floating-consult__link:hover {
+  transform: scale(1.06);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.24);
+}
+
+.floating-consult__link:focus-visible {
+  outline: 3px solid #8f8578;
+  outline-offset: 2px;
+}
+
+.floating-consult__link--phone {
+  background: #0f1f3b;
+  color: #ffffff;
+}
+
+.floating-consult__link--phone:hover {
+  filter: brightness(1.06);
+}
+
+.floating-consult__link--kakao {
+  background: #fee500;
+  color: #181600;
+}
+
+.floating-consult__link--kakao:hover {
+  filter: brightness(1.04);
+}
+
+.floating-consult__link--inquiry {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+.floating-consult__link--inquiry:hover {
+  filter: brightness(1.08);
+}
+
+@media (max-width: 380px) {
+  .floating-consult {
+    right: max(0.6rem, calc(env(safe-area-inset-right) + 0.45rem));
+    bottom: calc(0.8rem + env(safe-area-inset-bottom));
+  }
+
+  .floating-consult__link {
+    width: 2.95rem;
+    height: 2.95rem;
+    font-size: 0.7rem;
+  }
+}
+
 @media (min-width: 768px) {
   .section {
     padding: 5.4rem 0;
@@ -891,6 +969,18 @@ select {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .floating-consult {
+    right: max(1.2rem, calc(env(safe-area-inset-right) + 0.8rem));
+    bottom: calc(1.3rem + env(safe-area-inset-bottom));
+    gap: 0.65rem;
+  }
+
+  .floating-consult__link {
+    width: 3.35rem;
+    height: 3.35rem;
+    font-size: 0.76rem;
   }
 }
 
