@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://sooshindg.github.io/</loc>
+    <loc>https://sooshindg.github.io/homepage_interior/index.html</loc>
     <lastmod>2026-01-01</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://sooshindg.github.io/portfolio.html</loc>
+    <loc>https://sooshindg.github.io/homepage_interior/about.html</loc>
     <lastmod>2026-01-01</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://sooshindg.github.io/contact.html</loc>
+    <loc>https://sooshindg.github.io/homepage_interior/portfolio.html</loc>
     <lastmod>2026-01-01</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://sooshindg.github.io/homepage_interior/contact.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
