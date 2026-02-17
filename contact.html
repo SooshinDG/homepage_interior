@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="SOO DESINE 수디자인 문의하기 - 인테리어 상담 및 견적 문의">
+  <title>문의하기 | SOO DESINE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SOO DESINE 홈">
+        SOO DESINE <span>수디자인</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">메뉴 열기</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="주 메뉴">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="about.html">회사소개</a></li>
+          <li><a href="portfolio.html">시공사례</a></li>
+          <li><a href="contact.html" aria-current="page">문의하기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">문의하기</p>
+        <h1>공간 상담 및 견적 문의</h1>
+        <p class="lead">
+          원하는 공간의 목적, 일정, 예산을 알려주시면
+          수디자인이 가장 합리적인 방향으로 제안드립니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container contact-layout">
+        <div class="contact-cards">
+          <article class="card contact-card">
+            <h2>전화 상담</h2>
+            <p>빠른 상담이 필요하시면 아래 번호로 연락 주세요.</p>
+            <p><a href="tel:01012345678">010-1234-5678</a></p>
+          </article>
+          <article class="card contact-card">
+            <h2>이메일 문의</h2>
+            <p>도면, 참고 이미지와 함께 요청 사항을 보내주실 수 있습니다.</p>
+            <p><a href="mailto:contact@soodesine.kr">contact@soodesine.kr</a></p>
+          </article>
+          <article class="card contact-card">
+            <h2>상담 가능 시간</h2>
+            <p>평일 09:00 - 18:00</p>
+            <p>토요일 예약 상담 가능</p>
+          </article>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <h2>상담 요청서</h2>
+          <label for="name">성함</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="phone">연락처</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+
+          <label for="project-type">공간 유형</label>
+          <select id="project-type" name="project-type" required>
+            <option value="">선택해 주세요</option>
+            <option value="residential">주거 인테리어</option>
+            <option value="commercial">상업 공간</option>
+            <option value="partial">부분 리뉴얼</option>
+            <option value="other">기타</option>
+          </select>
+
+          <label for="message">요청 내용</label>
+          <textarea id="message" name="message" rows="5" placeholder="희망 일정, 예산, 요청 사항을 입력해 주세요." required></textarea>
+
+          <button class="btn btn-primary" type="submit">문의 접수하기</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>SOO DESINE</strong> 수디자인</p>
+      <p>Interior Design Contractor | 상담부터 시공까지 책임 있게 진행합니다</p>
+      <p>&copy; 2026 SOO DESINE. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
