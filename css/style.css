@@ -510,7 +510,8 @@ select {
 .consultation-guide-card,
 .phone-consult-card,
 .inquiry-form,
-.business-info-card {
+.business-info-card,
+.contact-channel-card {
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--surface);
@@ -585,13 +586,19 @@ select {
   gap: 1rem;
 }
 
+.contact-channel-links-wrap {
+  margin-top: 1rem;
+}
+
 .inquiry-form,
-.business-info-card {
+.business-info-card,
+.contact-channel-card {
   padding: 1.3rem 1.1rem;
 }
 
 .inquiry-form h2,
-.business-info-card h2 {
+.business-info-card h2,
+.contact-channel-card h2 {
   font-size: 1.35rem;
 }
 
@@ -600,6 +607,63 @@ select {
   margin-bottom: 1.1rem;
   color: var(--text-soft);
   font-size: 0.96rem;
+}
+
+.contact-channel-intro {
+  margin-top: 0.5rem;
+  color: var(--text-soft);
+  font-size: 0.96rem;
+}
+
+.contact-channel-button-stack {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.72rem;
+}
+
+.contact-channel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.contact-channel-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.contact-channel-btn-phone {
+  color: #ffffff;
+  background: #1f2937;
+}
+
+.contact-channel-btn-phone:hover {
+  background: #111827;
+}
+
+.contact-channel-btn-kakao {
+  color: #1b1b1b;
+  background: #fee500;
+}
+
+.contact-channel-btn-kakao:hover {
+  background: #f6d80f;
+}
+
+.contact-channel-btn-instagram {
+  color: #ffffff;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 35%, #dc2743 68%, #bc1888 100%);
+}
+
+.contact-channel-btn-instagram:hover {
+  filter: brightness(0.96);
 }
 
 .form-group {
@@ -796,7 +860,8 @@ select {
   .consultation-guide-card,
   .phone-consult-card,
   .inquiry-form,
-  .business-info-card {
+  .business-info-card,
+  .contact-channel-card {
     padding: 1.7rem;
   }
 
